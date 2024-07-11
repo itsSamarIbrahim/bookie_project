@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Bookie Registration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="signupTitle">
+            <img src="images/bookie_logo.png" alt="Bookie Logo" class="logo">
+            <div class="signup">Sign Up to</div>
+            <div class="projectName">Bookie</div>
+        </div>
+        <div class="form-container">
+            <form id="registrationForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+                <div id="usernameError" class="error-message"></div>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div id="emailRequirements" class="requirements">
+                    <span id="emailFormatRequirement" class="requirement">Valid email format</span>
+                </div>
+                <div id="emailError" class="error-message"></div>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <div id="passwordError" class="error-message"></div>
+
+                <div id="passwordRequirements" class="requirements">
+                    <span id="lengthRequirement" class="requirement">At least 8 characters</span>
+                    <span id="uppercaseRequirement" class="requirement">uppercase letter</span>
+                    <span id="lowercaseRequirement" class="requirement">lowercase letter</span>
+                    <span id="numberRequirement" class="requirement">number</span>
+                    <span id="symbolRequirement" class="requirement">symbol</span>
+                </div>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <div id="confirmPasswordError" class="error-message"></div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="signin-link">
+                Already have an account? <a href="signin.html">Sign in</a>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/validation.js"></script>
+</body>
+</html>
