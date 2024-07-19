@@ -1,11 +1,39 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     clearErrors();
 
-    var emailInput = document.getElementById('email');
-    var passwordInput = document.getElementById('password');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
 
-    var isValid = true;
+    const isValid = validateForm(emailInput, passwordInput);
+
+    if (isValid) {
+        try {
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: emailInput.value, password: passwordInput.value })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                document.getElementById('message').innerText = data.message;
+                document.getElementById('message').style.color = 'green';
+                // Redirect or update UI on successful login
+            } else {
+                showError('emailError', data.error);
+            }
+        } catch (error) {
+            showError('emailError', 'An error occurred during login.');
+        }
+    }
+});
+
+function validateForm(emailInput, passwordInput) {
+    let isValid = true;
 
     // Validate email format
     if (!isValidEmail(emailInput.value)) {
@@ -19,16 +47,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         showError('passwordError', 'Password must be at least 8 characters long.');
     }
 
-    // Proceed with login if valid
-    if (isValid) {
-        // Simulate login process or submit form to backend
-        console.log('Login successful!');
-        // Replace with actual login logic here
-    }
-});
+    return isValid;
+}
 
 function isValidEmail(email) {
-    // Basic email format validation
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
