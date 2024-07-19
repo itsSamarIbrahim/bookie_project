@@ -4,27 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/landing.css">
-    <title>Welcome to Bookie</title>
+    <title>Bookie Project</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="images/bookie_logo.png" alt="Mookie Logo">
-            <nav>
-                <ul>
-                    <li><a href="landing.html">Home</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>Welcome to Bookie</h1>
-            <p>Enjoy your reading!</p>
-        </main>
-        <footer>
-            <p>&copy; 2024 Mookie. All rights reserved.</p>
-        </footer>
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="cover-image">
+            <!-- Large cover image related to Bookie -->
+            <img src="https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_auto/eadn-wc05-103229.nxedge.io/cdn/wp-content/uploads/2023/12/stoicism-poems-stack-books.jpg" alt="Bookie Cover Image">
+        </div>
+        <div class="intro-text">
+            <h1>Bookie</h1>
+            <h3>Welcome to Bookie</h3>
+            <p>A modern platform for book lovers.</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#features">Explore Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#video">Watch Video</a></li>
+            </ul>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/itssamaribrahim/bookie_project" class="btn" target="_blank">View on GitHub</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="feature">
+            <img src="images/recommandation.png" title="reward icons" alt="Feature 1" class="feature_img">
+            <h2>Personalized Recommendations</h2>
+            <p>Discover books tailored just for you based on your preferences and reading history.</p>
+        </div>
+        <div class="feature">
+            <img src="images/review.png" alt="Feature 2" class="feature_img">
+            <h2>Interactive Book Reviews</h2>
+            <p>Engage with a community of book enthusiasts through interactive reviews and discussions.</p>
+        </div>
+        <div class="feature">
+            <img src="images/virtual_book.png" alt="Feature 3" class="feature_img">
+            <h2>Virtual Bookshelves</h2>
+            <p>Organize your reading list and track your progress with customizable virtual bookshelves.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Bookie</h2>
+        <!-- <p>Bookie was inspired by a lifelong passion for reading and the desire to create a modern platform that enhances the book lover's experience. This project is a Portfolio Project for Holberton School. <a href="holberton-portfolio-link">Learn more</a>.</p> -->
+        <p>Bookie is a modern platform designed for book enthusiasts, inspired by a deep passion for reading. It aims to enhance the reading experience with personalized features and an intuitive interface. Developed as a Portfolio Project for Holberton School, Bookie combines advanced technology with a user-centric approach to deliver a unique and engaging book management experience.</p>
+        <ul class="team-members">
+            <li><a href="team-member-linkedin">LinkedIn</a></li>
+            <li><a href="team-member-github">GitHub</a></li>
+            <li><a href="team-member-twitter">Twitter</a></li>
+        </ul>
+    </section>
+    <section>
+        <a href="https://github.com/itssamaribrahim/bookie_project" class="btn" target="_blank">View on GitHub</a>
+    </section>
+    <!-- Video Section -->
+    <section id="video" class="video">
+        <h2><!--Meet the Team and -->Learn About Bookie</h2>
+        <!-- Embed video introducing team, project inspiration, feature walkthrough, future plans -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jdjYt7DFsZg?si=myQ_PKN5AffUB5VP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <div class="the_end">
+        <p>Enjoy your reading!</p>
     </div>
+    <footer class="the_end">
+        <p>&copy; 2024 Bookie. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/landing.js"></script>
 </body>
 </html>

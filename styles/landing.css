@@ -1,60 +1,241 @@
-/* style.css */
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
+.the_end {
     text-align: center;
+}
+
+.feature_img {
+    width: 10%;
+    height: 10%;
+}
+/* Section styles */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.intro {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 100px 0;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
+.cover-image {
+    width: 100%;
+    height: 20%;
 }
 
-header img {
-    max-width: 100px;
+.intro .cover-image {
+    max-width: 10%;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-nav ul {
+.intro .cover-image:hover {
+    transform: scale(1.02);
+}
+
+.intro .intro-text {
+    margin-bottom: 30px;
+}
+
+.intro .navbar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-bottom: 30px;
 }
 
-nav ul li {
-    display: inline;
+.intro .navbar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.intro .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.intro .navbar ul li a:hover {
+    color: #007bff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.features {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+
+.features .feature {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.features .feature:hover {
+    transform: translateY(-5px);
+}
+
+.features .feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.features .feature h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.features .feature p {
+    font-size: 18px;
+    color: #666;
+}
+
+.about {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.about a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about a:hover {
+    color: #0056b3;
+}
+
+.team-members {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.team-members li {
+    display: inline-block;
     margin-right: 10px;
 }
 
-nav ul li a {
+.team-members li a {
+    color: #007bff;
     text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #f0f0f0;
+.team-members li a:hover {
+    color: #0056b3;
 }
 
-main {
-    margin-top: 20px;
+.video {
+    background-color: #333;
+    color: #fff;
+    padding: 100px 0;
 }
 
-footer {
-    margin-top: 20px;
-    color: #888;
+.video h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .intro .cover-image {
+        margin-bottom: 20px;
+    }
+
+    .intro .intro-text {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .features .feature {
+        padding: 20px;
+    }
+
+    .features .feature h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .features .feature p {
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+
+    .video h2 {
+        font-size: 36px;
+    }
 }
